@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: install
     steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install dependencies
+        run: npm ci
       - name: lint
         run: npm run lint
       - name: test
