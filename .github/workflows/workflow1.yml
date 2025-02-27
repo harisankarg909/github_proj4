@@ -1,7 +1,10 @@
 name: workflow1
-on: push
+on:
+    pull_request:
+        types: [opened, assigned, closed]
+
 jobs:
-    lint:
+    deploy:
         runs-on: ubuntu-latest
         
         steps:
